@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Architects Daughter', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("../images/electric-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid 4px orange;
+}
+
+@font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/architectsdaughter/v18/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvTYlg4w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#header .logo a {
+    text-decoration: none;
+    color: white;
+}
+
+#header .logo a:hover {
+    color: cyan;
+}
+
+#header {
+
+    color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    /* background: rgb(3, 3, 100); */
+}
+
+#header h1 {
+    font-family: 'Architects Daughter', sans-serif;
+
+    color: antiquewhite;
+}
+
+#header h1:hover {
+    cursor: pointer;
+    color: cyan;
+}
+
+
+/* ASSIDE section....contactele */
+
+.asside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+
+}
+
+.asside a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition-property: font-size;
+    transition-duration: 2s;
+
+}
+
+.asside a:hover {
+    color: orange;
+    font-size: 25px;
+
+}
+
+.trin-trin {
+    animation-name: trin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: white;
+}
+
+.icon-phone {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC1klEQVRoQ+2Z21XbQBCG/7ULCKkgTgUxFcR0YCrAl7wHKvBQQeA9Fu4AqCCkgogKcCqIU4C1OaONOLYl7e5IstY+B73wwMwy385l/10UjvxTRx4/3gBCZ7A8AyPqQ3XeOQPUyTMWtHLa7ckgD8CBd3APhZ7n34wxp1NP28bN8gATehEEbwJSOMN3emo8Oo8F8wBT0h5+2yYHBsD17K79TQSNK0R0IwZvwKGohJ6g8Fm2tn7E/Hoo82nGuqiEFgAuRMtrrBDRe5FPQ8ZFGSAozMTrr3GKBcViv5oOeYAvNIDGD/G6gfqg6Bw4QRd/KgAsEdFHsV9Nh+KTeEIxFD6J1w5QRsUA09kNoL6KAQKcByUAxCPxXgjwG2v029ZF5WJumgo03wPtL9YYHMYUyrZ9Sr7nQbDgjQwr+1iVdvHLWUYB6n4zJvuNbEJ2WaExRpRmKthnB5hamznoPSDbMfed2H4mnGNOD8G239oDWVQ2acEiLkk10DIUhDsDHJm9F2Kscdb2/PcvIbYcUQ9dvJTussYCEY1DZMEvAyYLl1D4ZoEIcivzB3CXEhBgrMoATCnxpaVcYrQMIQPgLNjPBlNhWhGi2bWzJ0bEd487aAwAPCDBrVRPyQFMKY2gcGcNkBs7wVXpdDLB882vv7UOj2aFGFqxClghUTEsr3/VAEwmfMQej9hxblfLgrftiMYSCc5316oO4A+xXVJVgn8Fyz/f1AMQQWAJpQjQl7mycTbLfwONn4iI++X1qw9geqLaU4xv4Jnd3gB8G1sa8K79XgGM5OBLEKvTD3VjLfTfO4CBOEFXU6VXDRd1KwBZEEaG86htLhutAmQgRgSS4IWjPA9BALKy6oBBeIT6PtXkQYIBbIbCMgQpjPzp8iAAMhhWth3wC+DQ+x8qBS/gzRxkrunh83tu+gR9KPSh0Ut/bpabxjMSDHfv34cD4ANZYPMGUHHjGnM7+gz8A29K+DHRISQ9AAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    display: inline-block;
+}
+
+@keyframes trin {
+
+    from {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    20%,
+    32%,
+    44%,
+    56%,
+    68% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    23%,
+    35%,
+    47%,
+    59%,
+    71% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    26%,
+    38%,
+    50%,
+    62%,
+    74% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    29%,
+    41%,
+    53%,
+    65%,
+    77% {
+        transform: rotate3d(0, 0, 1, -15deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+}
+
+
+
+
+
+
+
+/* ...........main............................................................... */
+.main {
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    max-height: fit-content;
+    width: 100%;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: start;
+    /* padding-top: 3rem; */
+}
+
+.grid-item {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 1rem rgba(206, 225, 241, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 25px 25px;
+    border: 8px solid black;
+
+
+}
+
+.grid-item:hover {
+    transform: translateY(-1%);
+    box-shadow: 0 10rem 10rem rgba(0, 0, 0, 0.5);
+
+
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: 16rem;
+    object-fit: contain;
+    border: solid 6px black;
+    border-radius: 25px 25px;
+}
+
+.card-content {
+    padding: 0.5rem;
+}
+
+.card-header {
+    background-color: azure;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.card-text {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: orange;
+    background-color: rgb(1, 1, 58);
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+    margin-left: 1rem;
+    transform: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+    background-color: #082caf;
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+    margin-left: 1.5rem;
+
+}
+
+/* @media only screen and (max-width:60em) {
+    body {
+        padding: 3rem;
+    }
+
+    .grid {
+        grid-gap: 3rem;
+    }
+} */
+
+
+
+
+
+/* About page css GDPR*/
+
+
+
+/* CONTACT page CSS .................................................*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: darkslateblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: darkblue;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    font-weight: 800;
+    font-size: larger;
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.container p {
+    font-weight: 400;
+}
+
+.container ul>li {
+    list-style: none;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+}
+
+.container a:hover {
+    color: rgb(236, 7, 7);
+    font-size: larger;
+}
+
+
+
+/* Footer ....................Footer......................................Footer */
+
+
+.footer {
+    /* position: ; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 220px;
+    border-top: 5px solid black;
+
+
+}
+
+.footer a {
+    color: antiquewhite;
+}
+
+.footer a:hover {
+    color: aquamarine;
+}
+
+.footer .social>* {
+    margin-right: 30px;
+    align-items: center;
+}
+
+.footer p {
+    color: antiquewhite;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer .footerMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding-top: 1rem;
+}
+
+.footer .footerMenu ul>li {
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footerMenu a {
+    text-decoration: none;
+    padding-right: 1rem;
+
+}
